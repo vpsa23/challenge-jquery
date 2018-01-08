@@ -3,6 +3,6 @@ $(document).ready(function(){
 });
 
 /*
-* OCULTANDO BARRA DE MENÚ
+* ETAPA 1
 */
   $('.js-menu').hide();
