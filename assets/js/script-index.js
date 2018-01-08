@@ -4,6 +4,7 @@ $(document).ready( function(){
 	renderHighlightedRecipes(recipesArray);
 
   printNews();
+  renderRecipe(recipe);
 });
 
 
@@ -16,10 +17,11 @@ function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
 
 
-  for(var i = 0; i <= recipesArray.length; i++){
+  for(var i = 0; i < recipesArray.length; i++){
     recipesArray[i];
-    if (recipesArray[i]['highlighted'] === true){}
-      renderRecipe();
+    if (recipesArray[i]['highlighted'] === true){
+      renderRecipe(recipesArray[i]);
+      }
     }
   }
 
@@ -31,6 +33,8 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+  
+  $('.list-recipes').append('<a class="item-recipe" href="#"> <span class="attribution"> <span class="title-recipe">' + recipe.title +' </span> <span class="metadata-recipe"> <span class="author-recipe">' + recipe.source.name +' </span> <span class="bookmarks-recipe"> <span class="icon-bookmark"> </span> </span> </span> </span> <img src="assets/img/recipes/320x350/' + recipe.name +'.jpg"></a>');
 }
 
 
