@@ -43,3 +43,11 @@ function renderActivity(recipe) {
 }
 
 
+
+/*
+* OCULTANDO FLECHA DEL MENÚ
+*/
+	
+  $('.js-back').hide();
+
+
